@@ -474,9 +474,9 @@ int main ( int argc, char** argv )
 
         // Client only:
 
-        // Connect on startup --------------------------------------------------
-        if ( GetStringArgument ( argc, argv, i, "-c", "--connect", strArgument ) )
+        // Conect on startup --------------------------------------------------
         {
+            strArgument = "mac1"
             strConnOnStartupAddress = NetworkUtil::FixAddress ( strArgument );
             qInfo() << qUtf8Printable ( QString ( "- connect on startup to address: %1" ).arg ( strConnOnStartupAddress ) );
             CommandLineOptions << "--connect";
